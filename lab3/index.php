@@ -23,11 +23,11 @@
 
 	<main class="main container">
 		<div class="controller">
-			<?php 
-				if(!isset($_GET['store']))
+			<?php
+				if (!isset($_GET['store']))
 					$_GET['store'] = '';
 				else
-					if(isset($_GET['key']))
+					if (isset($_GET['key']))
 						$_GET['store'] .= $_GET['key'];
 			?>
 
@@ -44,7 +44,7 @@
 	</main>
 
 	<footer class="footer">
-		<div class="footer__info"><?php echo "Количество нажатий: 0" ?></div>
+		<div class="footer__info"><?php echo 'Количество нажатий: ' . strlen($_GET['store']) ?></div>
 	</footer>
 </body>
 </html>

@@ -30,6 +30,8 @@
 
 			$sum = 0;
 			$average = 0;
+			
+			$maxValue = 3000; ###################
 
 			$min = func($start_value);
 			$max = func($start_value);
@@ -66,6 +68,8 @@
 
 			for ($x = $start_value, $i = 1; $x < $encounting; $x += $step, $i++) {
 				$y = round(func($x), 3);
+				
+				if ($y > $maxValue) break; ###################
 
 				if ($y < $min) $min = $y;
 				if ($y > $max) $max = $y;

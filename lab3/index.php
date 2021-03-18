@@ -29,22 +29,27 @@
 				else
 					if (isset($_GET['key']))
 						$_GET['store'] .= $_GET['key'];
+					
+				if (!isset($_GET['counter']))
+					$_GET['counter'] = 0
+				else
+					$_GET['counter'] += 1;
 			?>
 
 			<div class="storage"><?php echo $_GET['store'] ?></div>
 
 			<?php
 				for ($i = 0; $i < 10; $i++) { 
-					echo '<a href="/?key=' . $i . '&store=' . $_GET['store'] . '" class="b' . $i . ' b">' . $i . '</a>';
+					echo '<a href="/?key=' . $i . '&store=' . $_GET['store'] . '&counter=' . $_GET['counter'] . '" class="b' . $i . ' b">' . $i . '</a>';
 				}
 			?>
 
-			<a href="/" class="reset">СБРОС</a>
+			<a href="<?php echo '?counter=' . $_GET['counter'] ?>" class="reset">СБРОС</a>
 		</div>
 	</main>
 
 	<footer class="footer">
-		<div class="footer__info"><?php echo 'Количество нажатий: ' . strlen($_GET['store']) ?></div>
+		<div class="footer__info"><?php echo 'Количество нажатий: ' . $_GET['counter'] ?></div>
 	</footer>
 </body>
 </html>

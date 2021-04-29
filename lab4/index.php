@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Кириллов Д.П. | 201-322 | №2</title>
+	<title>Кириллов Д.П. 1337 | 201-322 | №4</title>
 
 	<link rel="stylesheet" href="styles.css">
 </head>
@@ -50,7 +50,7 @@
 				} else echo 'В таблице нет строк с ячейками';
 			}
 
-			$countRT = 3;
+			$countRT = 10;
 
 			$structure = array(
 				'C1*C2*C3#C4*C5*C6', 
